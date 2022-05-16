@@ -66,7 +66,7 @@ url = "https://explorer.btc.com/btc/transactions"
 #没有弹窗模式
 options = webdriver.ChromeOptions()
 # #静默模式打开,不打开浏览器
-# options.add_argument('--headless')
+options.add_argument('--headless')
 
 options.add_argument('--no-sandbox')
 # 不加载图片, 提升速度
@@ -196,7 +196,6 @@ def t_crawler(path,from_time,to_time,t_number):
                             # 获取当前页码的页号，后续翻页
                             a[0].text
 
-
                             #保存当前页
                             df[t_number] = a[0].text
                             df.to_csv("page.txt", index=False)
@@ -253,26 +252,26 @@ def t_crawler(path,from_time,to_time,t_number):
 
 if __name__ == '__main__':
     if args.year == '2010to2011':
-        t_crawler(path=path['path1'],from_time='2010-01-11',to_time='2011-01-08',t_number="t1")
+        t_crawler(path=path['path1'],from_time='2010-01-11',to_time='2011-01-10',t_number="t1")
     if args.year == '2011to2012':
-        t_crawler(path=path['path2'], from_time='2011-01-11', to_time='2011-12-27', t_number="t2")
+        t_crawler(path=path['path2'], from_time='2011-01-11', to_time='2012-01-10', t_number="t2")
 
     if args.year == '2012to2013':
-        t_crawler(path=path['path3'],from_time='2012-01-11',to_time='2013-01-06',t_number="t3")
+        t_crawler(path=path['path3'],from_time='2012-01-11',to_time='2013-01-10',t_number="t3")
     if args.year == '2013to2014':
-        t_crawler(path=path['path4'], from_time='2013-01-11', to_time='2014-01-08', t_number="t4")
+        t_crawler(path=path['path4'], from_time='2013-01-11', to_time='2014-01-10', t_number="t4")
 
     if args.year == '2014to2015':
-        t_crawler(path=path['path5'],from_time='2014-01-11',to_time='2015-01-09',t_number="t5")
+        t_crawler(path=path['path5'],from_time='2014-01-11',to_time='2015-01-10',t_number="t5")
     if args.year == '2015to2016':
-        t_crawler(path=path['path6'], from_time='2015-01-11', to_time='2016-01-09', t_number="t6")
+        t_crawler(path=path['path6'], from_time='2015-01-11', to_time='2016-01-10', t_number="t6")
 
     if args.year == '2016to2017':
-        t_crawler(path=path['path7'],from_time='2016-01-11',to_time='2017-01-09',t_number="t7")
+        t_crawler(path=path['path7'],from_time='2016-01-11',to_time='2017-01-10',t_number="t7")
     if args.year == '2017to2018':
-        t_crawler(path=path['path8'], from_time='2017-01-11', to_time='2018-01-09', t_number="t8")
+        t_crawler(path=path['path8'], from_time='2017-01-11', to_time='2018-01-10', t_number="t8")
 
     if args.year == '2018to2019':
-        t_crawler(path=path['path9'], from_time='2018-01-11', to_time='2019-01-09', t_number="t9")
+        t_crawler(path=path['path9'], from_time='2018-01-11', to_time='2019-01-10', t_number="t9")
     if args.year == '2019to2020':
-        t_crawler(path=path['path10'], from_time='2019-01-11', to_time='2020-01-09', t_number="t10")
+        t_crawler(path=path['path10'], from_time='2019-01-11', to_time='2020-01-10', t_number="t10")
